@@ -31,13 +31,14 @@ layout: default
 
   {% assign no-image = nil %}
   {% if page.image %}
+  {% include ads.html %}
     <div class="post__head">
       <div class="post-image" style="background-image: url({{site.baseurl}}/images/{{page.image}})"></div>
     </div>
   {% else %}
     {% assign no-image = 'post-no-image' %}
   {% endif %}
-
+{% include ads.html %}
   </div>
 
 
@@ -78,6 +79,7 @@ layout: default
         </ul>
       </div>
     </article>
+	
     <!-- end post -->
     </div>
   </div>
@@ -119,6 +121,6 @@ layout: default
     </div>
     {% endif %}
   </div>
-
+{% include ads.html %}
   {% if site.data.settings.disqus-identifier %} {% include disqus-comments.html %} {% endif %}
   </div>
